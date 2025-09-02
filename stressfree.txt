@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Stressfreestudy
+        </title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!---<link rel="stylesheet" href="stressfree.css">-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+ 
+
+  </style>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: filter 0.3s ease;
+    background-color: white; 
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,25,125,0.6); 
+    padding: 15px 20px;
+    position: fixed;
+    width: 95%;
+
+
+}
+
+.navbar img {
+    width: 60px;
+    margin-right: 5px;
+    border-radius: 7px;
+}
+.navbar .menu-btn {
+    color: #333; 
+    font-size: 1.8em;
+    cursor: pointer;
+    display: block;
+}
+
+.side-menu {
+    position: fixed;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #003366; 
+    transition: right 0.3s;
+}
+.side-menu.active {
+    right: 0;
+}
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.side-menu ul li a {
+    color: black; 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.3em;
+}
+.side-menu ul li a:hover {
+    background-color: #000;
+}
+   .main-content{
+    margin-top: 70px;
+ align-items:center;
+ color:black;
+ padding:20px;
+ }
+ .main-content h1{
+ font-size:2.5rem;
+ margin-bottom:10px;
+ }
+ .main-content p{
+ font-size:1.2rem;
+ }
+</style>
+    </head>
+
+    <body>
+        <!--navbar section-->
+        <div class="navbar">
+            <img src="logo.jpg" alt="logo"><br>
+            <button class="menu-btn" onclick="togglemenu()">
+        
+                &#9776;
+            </button>
+            </div>
+            <div id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="togglemenu()">X</div>
+            <ul>
+          <li><a href="#"><i class="fas fa-info-circle"></i>About Us</a></li>
+           <li><a href="#"><i class="fas fa-cogs"></i> Services</a></li>
+        <li><a href="#"><i class="fas fa-users-plus"></i> Register</a></li>
+          <li><a href="#"> <i class="fas fa-phone"></i> Contact</a></li>
+          <li> <a href="#"><i class="fas fa-users"></i> Community</a></li>
+            </ul>
+            </div>
+    
+        <!--Hero section-->
+        
+            <div class="main-content">
+                <h1>Welcome to stressfreestudy
+                </h1>
+                <p>
+                "Learn. Grow. Succeed."<br>
+                Access quality educational resources,materials and connecting with other student
+                to reach your goals
+
+                </p>
+            </div>
+        
+
+        <!--About section-->
+        <h2>About Us</h2>
+        <p>
+            Stressfreestudy provides high-quality educational<br> content, exam resources and studying tools for students
+            <br>ensuring you excel in academic journey whether you're preparing for an exam or looking to expand 
+            your kknowledge 
+        </p>
+        <p>
+            Our goal is to provide students with the best learning resources,support in thier ecademic journey
+            no matter thier<br> location and to make exam preparation easier, smarter and more effective
+        </p>
+
+        <!--footer-->
+        <footer>
+            <p>&copy; 2025 Your stressfreestudy.
+                All rights Reserved.
+            </p>
+            <a href="https://wa.me/237654822292" target="_blank">Chat with us on what'sapp</a>
+        </footer>
+       <script>
+        function togglemenu(){
+
+        const sidemenu=
+            document.getElementById('side-menu');
+            const body=
+            document.querySelector('body');
+            
+                sidemenu.classlist.toggle('active');
+                body.classList.toggle('blurred')
+            }
+
+        </script>
+    </body>
+</html>

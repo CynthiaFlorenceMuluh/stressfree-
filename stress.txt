@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>
+           Stressfreestudy
+       </title>
+       <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+body{
+}
+.navbar{
+background-color:rgb(0,25,120);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+.navbar img{
+height:80px;
+width:50px;
+border-radius:7px;
+}
+.navbar ul{
+ list-style:none;
+ display:flex;
+ justify-content: center
+ gap:20px;
+ padding:10px;
+}
+.navbar ul li a{
+ text-decoration: none;
+color:rgba(0,0,100,0.5)
+ font-size: 18px;
+ font-weight: bold;
+ background-color: aqua;
+padding:10px;
+
+}
+main-content{
+display:flex;
+align-items:center;
+color:black;
+padding:20px;
+}
+.main-content h1{
+font-size:2.5rem;
+margin-bottom:10px;
+}
+.main-content p{
+font-size:1.2rem;
+}
+
+
+   </head>
+   <body>
+       <!--navbar section-->
+       <div class="navbar">
+           <img src="logo.jpg" alt="logo">
+           <ul>
+         <li><a href="About.html">About Us</a></li>
+          <li><a href="service">Services</a></li>
+          <li><a href="Register">Register</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+         <li> <a href="community.html">Community</a></li>
+           </ul>
+           
+       </div>
+       <!--Hero section-->
+       
+           <div class="main-content">
+               <h1>Welcome to stressfreestudy
+               </h1>
+               <p>
+               "Learn. Grow. Succeed."<br>
+               Access quality educational resources,materials and connecting with other student
+               to reach your goals
+               </p>
+           </div>
+       
+       <!--About section-->
+       <h2>About Us</h2>
+       <p>
+           Stressfreestudy provides high-quality educational content, exam resources and studying too
+           ensuring you excel in academic journey whether you're preparing for an exam or looking to 
+           your kknowledge 
+       </p>
+       <p>
+           Our goal is to provide students with the best learning resources,support in thier ecademic
+           no matter thier location and to make exam preparation easier, smarter and more effective
+       </p>
+       <!--footer-->
+       <footer>
+           <p>&copy; 2025 Your stressfreestudy.
+               All rights Reserved.
+           </p>
+           <a href="https://wa.me/2376501" target="_blank">Chat with us on what'sapp</a>
+       </footer>
+   </body>
+</html> 

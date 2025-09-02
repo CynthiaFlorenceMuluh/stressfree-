@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past GCE Question</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2a9d8f;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Section Hero */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background: #f4f4f4;
+        }
+        .hero-text {
+            width: 50%;
+        }
+        .hero h1 {
+            font-size: 36px;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .hero input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .hero button {
+            padding: 10px 20px;
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .hero-images {
+            width: 45%;
+            display: flex;
+            gap: 10px;
+        }
+        .hero-images img {
+            width: 50%;
+            border: 5px solid green;
+            border-radius: 10px;
+        }
+
+        /* Section des catégories */
+        .categories {
+            padding: 30px;
+            background: #f9f9f9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .category {
+            border: 2px solid;
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .category:nth-child(odd) {
+            transform: rotate(-8deg);
+        }
+        .category:nth-child(even) {
+            transform: rotate(8deg);
+        }
+
+        /* Section des cours */
+        .course-categories {
+            text-align: center;
+            padding: 40px;
+            background: #F9F9F9;
+        }
+        .course-categories h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Rectangles */
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .category-box {
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 18px;
+            height: 100px; /* Plus long qu'un carré */
+        }
+        .category-box span {
+            font-weight: bold;
+            display: block;
+        }
+        .category-box p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2a9d8f;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .categories {
+            padding: 30px;
+            background: #f9f9f9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .category {
+            border: 2px solid;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            min-width: 120px;
+            text-align: center;
+        }
+        .why-study {
+            display: flex;
+            align-items: center;
+            background: #dff6e0;
+            padding: 50px;
+        }
+        .why-study img {
+            width: 300px;
+            margin-right: 20px;
+        }
+        .why-study-text {
+            max-width: 600px;
+        }
+        .why-study h2 {
+            font-size: 28px;
+        }
+        .why-study ul {
+            list-style: none;
+            padding: 0;
+        }
+        .why-study ul li {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .why-study ul li::before {
+            content: "\2713";
+            color: green;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        
+        .course-gallery {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .course-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .course-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .course-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .course-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .course-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        *
+        .courses-by-subject {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.courses-by-subject h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.subject-category {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subject-category h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subject-category h3 span {
+    font-weight: bold;
+    color: #555;
+}
+
+.subject-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subject-category ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header>
+        <div class="logo">MasterPiece</div>
+        <nav>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>100% Free Secondary School Courses + Past Question paper</h1>
+            <p>Access various subjects with ease!</p>
+            <input type="text" placeholder="What subject do you want to learn?">
+            <button>Search</button>
+        </div>
+        <div class="hero-images">
+            <img src="image1.jpg" alt="Classroom Learning">
+            <img src="image2.jpg" alt="Study Focus">
+        </div>
+    </section>
+
+    <!-- Section des matières -->
+    <section class="categories">
+        <div class="category" style="border-color: blue;">Mathematics</div>
+        <div class="category" style="border-color: green;">Physics</div>
+        <div class="category" style="border-color: blue;">Chemistry</div>
+        <div class="category" style="border-color: brown;">Geography</div>
+        <div class="category" style="border-color: green;">History</div>
+        <div class="category" style="border-color: orange;">French</div>
+        <div class="category" style="border-color: red;">Economics</div>
+        <div class="category" style="border-color: green;">Computer Science</div>
+        <div class="category" style="border-color: red;">Civic Education</div>
+        <div class="category" style="border-color: blue;">Commerce</div>
+        <div class="category" style="border-color: blue;">Fine Arts</div>
+        <div class="category" style="border-color: red;">Agricultural Science</div>
+    </section>
+
+    <!-- Section des cours en ligne -->
+    <section class="course-categories">
+        <h2>Free online courses by Knowledge Area</h2>
+        <div class="categories-grid">
+            <div class="category-box" style="background: #2a9d8f;">
+                <span>Science</span>
+                <p>287 courses<br>17 areas</p>
+            </div>
+            <div class="category-box" style="background: #1E50A2;">
+                <span>Arts</span>
+                <p>175 courses<br>12 areas</p>
+            </div>
+            <div class="category-box" style="background: #66BB6A;">
+                <span>Techniciance</span>
+                <p>139 courses<br>12 areas</p>
+            </div>
+            <div class="category-box" style="background: #C62828;">
+                <span>Accounting</span>
+                <p>121 courses<br>11 areas</p>
+            </div>
+            <div class="category-box" style="background: #8E24AA;">
+                <span>Francophones</span>
+                <p>101 courses<br>7 areas</p>
+            </div>
+        </div>
+    </section>
+   <section>
+    <nav>
+        <ul>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+<section class="why-study">
+    <img src="C:\Users\asus\Desktop\New folder\pexels-tima-miroshnichenko-6671714 (1).jpg" alt="Why study with MasterPiece">
+    <div class="why-study-text">
+        <h2>Why study and learn with MasterPiece?</h2>
+        <ul>
+            <li>100% free online courses from start to finish</li>
+            <li>Digital certificate also free and valid</li>
+            <li>Exercises produced exclusively for classes</li>
+            <li>The largest selection of free online courses on the Internet</li>
+        </ul>
+    </div>
+</section>
+<p><h1>Extras in MasterPiece</h1></p>
+<main class="course-gallery">
+    <article class="course-item">
+        <img src="course1.jpg" alt="Course">
+        <div class="course-info">
+            <h3>Language Classes notes</h3>
+            <!--<p>136 pages | 7h 27m</p>-->
+        </div>
+    </article>
+    <article class="course-item">
+        <img src="course2.jpg" alt="Course">
+        <div class="course-info">
+            <h3>Programing Courses</h3>
+            <!--<p>50 pages | 2h 24m</p>-->
+        </div>
+    </article>
+    <article class="course-item">
+        <img src="course3.jpg" alt="Course">
+        <div class="course-info">
+            <h3>Business & Entrepreneurship</h3>
+            <!--<p>110 pages | 6h 00m</p>-->
+        </div>
+    </article>
+    <article class="course-item">
+        <img src="course4.jpg" alt="Course">
+        <div class="course-info">
+            <h3>BLAHBLAHBLAH</h3>
+            <!--<p>77 pages | 4h 25m</p>-->
+        </div>
+    </article>
+    <article class="course-item">
+        <img src="course5.jpg" alt="Course">
+        <div class="course-info">
+            <h3>BLAHBLAHBLAH</h3>
+            <!--<p>46 pages | 1h 41m</p>-->
+        </div>
+    </article>
+</main>
+
+
+<section class="courses-by-subject">
+    <h2>University Courses by Subject</h2>
+    <div class="subject-grid">
+        <div class="subject-category">
+            <h3>Science & Engineering <span>320 courses</span></h3>
+            <ul>
+                <li><a href="#">Mathematics, 40 courses</a></li>
+                <li><a href="#">Physics, 35 courses</a></li>
+                <li><a href="#">Chemistry, 30 courses</a></li>
+                <li><a href="#">Biology, 28 courses</a></li>
+                <li><a href="#">Mechanical Engineering, 45 courses</a></li>
+                <li><a href="#">Computer Science, 50 courses</a></li>
+                <li><a href="#">Electrical Engineering, 42 courses</a></li>
+            </ul>
+        </div>
+
+        <div class="subject-category">
+            <h3>Humanities & Social Sciences <span>210 courses</span></h3>
+            <ul>
+                <li><a href="#">History, 25 courses</a></li>
+                <li><a href="#">Philosophy, 20 courses</a></li>
+                <li><a href="#">Psychology, 30 courses</a></li>
+                <li><a href="#">Sociology, 22 courses</a></li>
+                <li><a href="#">Political Science, 18 courses</a></li>
+                <li><a href="#">International Relations, 20 courses</a></li>
+            </ul>
+        </div>
+
+        <div class="subject-category">
+            <h3>Business & Economics <span>150 courses</span></h3>
+            <ul>
+                <li><a href="#">Accounting, 25 courses</a></li>
+                <li><a href="#">Finance, 28 courses</a></li>
+                <li><a href="#">Marketing, 30 courses</a></li>
+                <li><a href="#">Entrepreneurship, 20 courses</a></li>
+                <li><a href="#">Supply Chain Management, 18 courses</a></li>
+                <li><a href="#">Human Resources, 15 courses</a></li>
+            </ul>
+        </div>
+
+        <div class="subject-category">
+            <h3>Medical & Health Sciences <span>180 courses</span></h3>
+            <ul>
+                <li><a href="#">Medicine, 40 courses</a></li>
+                <li><a href="#">Nursing, 35 courses</a></li>
+                <li><a href="#">Pharmacy, 28 courses</a></li>
+                <li><a href="#">Public Health, 25 courses</a></li>
+                <li><a href="#">Biomedical Sciences, 30 courses</a></li>
+                <li><a href="#">Nutrition and Dietetics, 22 courses</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MasterPiece. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
